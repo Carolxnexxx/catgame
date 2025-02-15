@@ -10,6 +10,3 @@ func _on_body_entered(body: Node2D) -> void:
 		audio_player.reparent(get_tree().current_scene)
 		audio_player.play()
 		queue_free()
-		
-	else:
-		print("Wrong one bro")

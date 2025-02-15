@@ -1,8 +1,39 @@
-[gd_scene load_steps=2 format=3 uid="uid://bslxnxgl8ocs8"]
+[gd_scene load_steps=7 format=3 uid="uid://baokixcpuko74"]
 
+[ext_resource type="Script" path="res://scripts/coin.gd" id="1_2bc1d"]
 [ext_resource type="Texture2D" uid="uid://b3rxyx153x7x5" path="res://assets/sprites/present.png" id="1_dny7x"]
+[ext_resource type="AudioStream" uid="uid://c03yjk5bgpwvt" path="res://assets/sounds/coin.wav" id="3_wfp3h"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nu55l"]
+atlas = ExtResource("1_dny7x")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vjld4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nu55l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rr2xe"]
+radius = 5.0
 
 [node name="Present" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_2bc1d")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_dny7x")
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5625, 0.5625)
+sprite_frames = SubResource("SpriteFrames_vjld4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_rr2xe")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_wfp3h")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
