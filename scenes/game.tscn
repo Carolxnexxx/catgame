@@ -1,4 +1,8 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=19 format=3 uid="uid://bwsd7s8wnvwia"]
+=======
+[gd_scene load_steps=17 format=3 uid="uid://bwsd7s8wnvwia"]
+>>>>>>> Stashed changes
 
 [ext_resource type="Texture2D" uid="uid://bfd3id1cedlb6" path="res://assets/sprites/world_tileset.png" id="1_0l2w1"]
 [ext_resource type="Script" path="res://scripts/game_manager.gd" id="1_a2ey8"]
@@ -6,7 +10,6 @@
 [ext_resource type="PackedScene" uid="uid://bh2k86m3xqxes" path="res://scenes/functionality/player1.tscn" id="1_n2rxk"]
 [ext_resource type="PackedScene" uid="uid://urpmva2t0ok8" path="res://scenes/functionality/platform.tscn" id="3_tk25t"]
 [ext_resource type="Texture2D" uid="uid://ble5nragtgskx" path="res://assets/sprites/clouds.png" id="4_53d8r"]
-[ext_resource type="PackedScene" uid="uid://bnvew0fk2yfsu" path="res://scenes/functionality/coin.tscn" id="4_w7no0"]
 [ext_resource type="PackedScene" uid="uid://4dg4fm8sujil" path="res://scenes/functionality/killzone.tscn" id="5_vib57"]
 [ext_resource type="PackedScene" uid="uid://drkjwhkviudpy" path="res://scenes/functionality/enemy.tscn" id="6_ofrwv"]
 [ext_resource type="FontFile" uid="uid://cvn8jt56c4g55" path="res://assets/fonts/PixelOperator8.ttf" id="7_ja1v3"]
@@ -218,32 +221,6 @@ layer_1/tile_data = PackedInt32Array(-131053, 458752, 5, -458699, 393216, 3, -52
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone"]
 position = Vector2(151, 89)
 shape = SubResource("WorldBoundaryShape2D_qpves")
-
-[node name="Coins" type="Node" parent="."]
-
-[node name="Coin" parent="Coins" instance=ExtResource("4_w7no0")]
-position = Vector2(71, 7)
-
-[node name="Coin2" parent="Coins" instance=ExtResource("4_w7no0")]
-position = Vector2(183, -104)
-
-[node name="Coin3" parent="Coins" instance=ExtResource("4_w7no0")]
-position = Vector2(401, -22)
-
-[node name="Coin4" parent="Coins" instance=ExtResource("4_w7no0")]
-position = Vector2(472, -103)
-
-[node name="Coin5" parent="Coins" instance=ExtResource("4_w7no0")]
-position = Vector2(665, -120)
-
-[node name="Coin6" parent="Coins" instance=ExtResource("4_w7no0")]
-position = Vector2(600, 7)
-
-[node name="Coin7" parent="Coins" instance=ExtResource("4_w7no0")]
-position = Vector2(712, -9)
-
-[node name="Coin8" parent="Coins" instance=ExtResource("4_w7no0")]
-position = Vector2(775, -72)
 
 [node name="Platforms" type="Node" parent="."]
 
