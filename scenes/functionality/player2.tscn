@@ -99,8 +99,8 @@ animations = [{
 "speed": 10.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5xj6"]
-size = Vector2(16, 22)
+[sub_resource type="CircleShape2D" id="CircleShape2D_pckyh"]
+radius = 7.07107
 
 [node name="Player2" type="CharacterBody2D" groups=["players"]]
 collision_layer = 6
@@ -113,5 +113,5 @@ sprite_frames = SubResource("SpriteFrames_ipyod")
 animation = &"run"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -12)
-shape = SubResource("RectangleShape2D_q5xj6")
+position = Vector2(-1, -8)
+shape = SubResource("CircleShape2D_pckyh")
