@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bwsd7s8wnvwia" path="res://scenes/game.tscn" id="1_dacyb"]
 [ext_resource type="PackedScene" uid="uid://urpmva2t0ok8" path="res://scenes/functionality/platform.tscn" id="2_cad0s"]
+[ext_resource type="PackedScene" uid="uid://cabpuu36xesfv" path="res://scenes/functionality/trophy.tscn" id="2_uuipt"]
 [ext_resource type="PackedScene" uid="uid://drkjwhkviudpy" path="res://scenes/functionality/enemy.tscn" id="4_35iql"]
-[ext_resource type="Texture2D" uid="uid://s3n2rtjdiero" path="res://assets/sprites/cake.png" id="4_lsusi"]
 
 [node name="Level2" instance=ExtResource("1_dacyb")]
 
@@ -64,12 +64,11 @@ position = Vector2(1224, 24)
 [node name="Player1" parent="." index="8"]
 position = Vector2(3, 19)
 
-[node name="Enemy" parent="." index="11" instance=ExtResource("4_35iql")]
+[node name="Trophy" parent="." index="11" instance=ExtResource("2_uuipt")]
+position = Vector2(1224, 16)
+
+[node name="Enemy" parent="." index="12" instance=ExtResource("4_35iql")]
 position = Vector2(632, 0)
 
-[node name="Platform" parent="." index="12" instance=ExtResource("2_cad0s")]
+[node name="Platform" parent="." index="13" instance=ExtResource("2_cad0s")]
 position = Vector2(1025, -22)
-
-[node name="Cake" type="Sprite2D" parent="." index="13"]
-position = Vector2(1224, 25)
-texture = ExtResource("4_lsusi")
