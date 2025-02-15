@@ -1,12 +1,11 @@
 extends CharacterBody2D
 
 @export var speed: float = 200.0
-@export var jump_force: float = -300.0
 @export var wall_jump_force: Vector2 = Vector2(250, -250)  # X for push, Y for jump
 @export var gravity: float = 800.0
 
 var can_wall_jump: bool = false
-var wall_direction: int = 0  # -1 = left wall, 1 = right wall
+var wall_direction: int = 0
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0

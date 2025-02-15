@@ -2,10 +2,8 @@ extends CharacterBody2D
 
 @export var speed: float = 200.0
 @export var jump_force: float = -300.0
-@export var wall_jump_force: Vector2 = Vector2(250, -250)  # X for push, Y for jump
 @export var gravity: float = 800.0
 
-var can_wall_jump: bool = false
 var wall_direction: int = 0  # -1 = left wall, 1 = right wall
 
 const SPEED = 130.0
@@ -20,19 +18,7 @@ func _physics_process(delta: float) -> void:
 	# Handle jump.
 	if Input.is_action_just_pressed("jump2") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
-	
-	if Input.is_action_just_pressed("jump2"):
-		if is_on_floor():
-			velocity.y = JUMP_VELOCITY
 
-		elif can_wall_jump:  # Perform wall jump
-			velocity = Vector2(-wall_direction * wall_jump_force.x, wall_jump_force.y)
-			can_wall_jump = false
-			
-	if not is_on_floor() and (is_on_wall() or test_wall_collision()):
-		can_wall_jump = true
-		wall_direction = 1 if get_wall_normal().x < 0 else -1  # Detect wall side
-	
 	# Get input direction: -1, 0, 1
 	var direction := Input.get_axis("move_left2", "move_right2")
 	

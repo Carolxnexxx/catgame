@@ -3,11 +3,11 @@ extends Camera2D
 @export var player1: Node2D
 @export var player2: Node2D
 
-var min_zoom = Vector2(1, 1)  # Closest zoom level
-var max_zoom = Vector2(2, 2)  # Farthest zoom level
-var max_distance = 400  # Maximum distance before full zoom-out
+var min_zoom = Vector2(1, 1)
+var max_zoom = Vector2(2, 2)
+var max_distance = 400
 
-func _process(delta):
+func _process(_delta):
 	if not player1 or not player2:
 		return
 

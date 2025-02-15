@@ -12,7 +12,7 @@ var respawn_position = Vector2(85, 0)  # Set your respawn position here
 const FALL_THRESHOLD = -100  # The Y position where the box will respawn
 
 # Called every frame
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	# Check if the box has fallen off the map (below the fall threshold)
 	if position.y < FALL_THRESHOLD:
 		respawn_box()
