@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://bqxt7w5yfyp2g"]
+[gd_scene load_steps=8 format=3 uid="uid://bqxt7w5yfyp2g"]
 
 [ext_resource type="PackedScene" uid="uid://bwsd7s8wnvwia" path="res://scenes/game.tscn" id="1_e6xk7"]
-[ext_resource type="PackedScene" uid="uid://cu7mpu0apd5jc" path="res://scenes/functionality/balloon.tscn" id="2_clfdl"]
+[ext_resource type="PackedScene" uid="uid://xuuwftt4td3y" path="res://scenes/functionality/balloon.tscn" id="2_clfdl"]
+[ext_resource type="PackedScene" uid="uid://dimp3lbbrbg8r" path="res://scenes/functionality/fish.tscn" id="3_37hmj"]
 
 [sub_resource type="Animation" id="Animation_m8l60"]
 length = 0.001
@@ -108,3 +109,6 @@ position = Vector2(149, -20)
 libraries = {
 "": SubResource("AnimationLibrary_08tla")
 }
+
+[node name="Fish" parent="." index="13" instance=ExtResource("3_37hmj")]
+position = Vector2(36, 2)
