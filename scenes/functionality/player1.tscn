@@ -74,7 +74,7 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_dwoyx"]
 radius = 5.0
 
-[node name="Player1" type="CharacterBody2D"]
+[node name="Player1" type="CharacterBody2D" groups=["players"]]
 z_index = 5
 collision_layer = 6
 collision_mask = 129

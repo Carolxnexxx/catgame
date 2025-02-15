@@ -117,5 +117,5 @@ theme_override_font_sizes/font_size = 100
 text = "Cat Puzzle"
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]
