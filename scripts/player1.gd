@@ -9,6 +9,9 @@ var wall_direction: int = 0
 
 const SPEED = 130.0
 const JUMP_VELOCITY = -300.0
+const PUSH_FORCE = 50
+const MAX_VELOCITY = 150
+
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var jump_cat_audio: AudioStreamPlayer2D = $JumpCatAudio
 
@@ -60,7 +63,14 @@ func _physics_process(delta: float) -> void:
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collision_crate = collision.get_collider()
+		if collision_crate.is_in_group("Crates") and abs(collision_crate.get_linear_velocity().x) < MAX_VELOCITY:
+			collision_crate.apply_central_impulse(collision.get_normal()*-PUSH_FORCE)
+
 	move_and_slide()
+	
 
 func test_wall_collision() -> bool:
 	var space_state = get_world_2d().direct_space_state

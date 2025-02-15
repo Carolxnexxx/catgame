@@ -282,3 +282,5 @@ position_smoothing_enabled = true
 script = ExtResource("13_qcv1y")
 player1 = NodePath("../Player1")
 player2 = NodePath("../Player2")
+
+[node name="Crate" type="RigidBody2D" parent="."]

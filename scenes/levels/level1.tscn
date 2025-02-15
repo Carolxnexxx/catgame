@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqxt7w5yfyp2g"]
+[gd_scene load_steps=10 format=3 uid="uid://bqxt7w5yfyp2g"]
 
 [ext_resource type="PackedScene" uid="uid://bwsd7s8wnvwia" path="res://scenes/game.tscn" id="1_e6xk7"]
 [ext_resource type="PackedScene" uid="uid://urpmva2t0ok8" path="res://scenes/functionality/platform.tscn" id="2_00pa3"]
@@ -45,6 +45,8 @@ _data = {
 "move": SubResource("Animation_23761"),
 "move2": SubResource("Animation_tt33j")
 }
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojkor"]
 
 [node name="Level1" instance=ExtResource("1_e6xk7")]
 
@@ -114,3 +116,16 @@ position = Vector2(149, -20)
 libraries = {
 "": SubResource("AnimationLibrary_08tla")
 }
+
+[node name="Crate" parent="." index="12" groups=["Crates"]]
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Crate" index="0"]
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 10.0
+offset_bottom = 10.0
+color = Color(0.921569, 0.156863, 0.239216, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crate" index="1"]
+shape = SubResource("RectangleShape2D_ojkor")
