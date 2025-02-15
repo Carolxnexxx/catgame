@@ -268,9 +268,9 @@ position = Vector2(664, 16)
 [node name="Exit" parent="." instance=ExtResource("11_87tqn")]
 position = Vector2(40, -200)
 
-[node name="Player1" parent="." instance=ExtResource("1_n2rxk")]
+[node name="Player1" parent="." groups=["Player1Cat"] instance=ExtResource("1_n2rxk")]
 
-[node name="Player2" parent="." instance=ExtResource("11_k1fhy")]
+[node name="Player2" parent="." groups=["Player2Girl"] instance=ExtResource("11_k1fhy")]
 position = Vector2(-31, 20)
 
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("player1", "player2")]
