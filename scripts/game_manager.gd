@@ -3,13 +3,9 @@ extends Node
 var score = 0
 var current_level = 1
 var level_path = "res://scenes/levels/"
-@onready var score_label_2: Label = $ScoreLabel2
-@onready var score_label_3: Label = $ScoreLabel3
 
 func add_point():
 	score += 1
-	score_label_2.text = str(score)
-	score_label_3.text = str(score)
 
 func next_level():
 	current_level += 1
